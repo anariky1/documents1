@@ -1,0 +1,32 @@
+step 1 :
+-------
+Add thread group in test plan
+
+Step 2 :
+-----
+Need to add controller for the thread
+controller -container which will hold similar steps or any no of steps 
+You can add not only organize your code but to add logic to it.
+
+step 3 :
+------
+
+Add sampler - add http request
+add google.com in server ip
+rt click on simle controller and add sampler
+what kind of request you want to send to server.
+
+Step 4 
+--------
+Save the script – it will save in .jmx format
+
+Step 5 : 
+-------
+Run the script – control + r
+Since you don’t have listener’s added , you don’t get the results .
+
+step 6 :
+------
+Add listener - view results tree
+RT Click on test plan -> listener and click view result tree
+You will get the response code as 200. You see a green tick mark , it means the test has passed.

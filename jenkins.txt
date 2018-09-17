@@ -1,0 +1,59 @@
+download jenkins war file
+open commandprompt and go to the war file path
+java -jar jenkins.war
+wait for message info log jenkins fully up and running
+goto the browser localhost:8080
+you will get jenkins window
+or
+you have installed jenkins
+configure it to run as window service
+go to manage jenkins->install as window service->
+(jenkins will auto start when you run pc)
+
+click New item
+Build a free style software project (name of project : My project 1)
+
+jenkins can be integrated with git/svn/cvs
+source code management: None(you will get git/svn/cvs as options,select None as option)
+right now iam not integrating with any source code management
+(Iam saying my project is lying in c drive)
+
+Build trigger
+
+Build
+---------
+eXECUTE windows batch command
+command: echo %time% (gives current time of system)
+save my project: My project 1 in the dashboard
+
+click on the project link and click on build now
+click on the project ,you will get the build history coming up
+click on the build link and go to the console output
+you will get the time
+
+No we want the build to run at every 5 min,for that we have build trigger option
+poll scm(poll it every 5 min to check if build is ok or not)
+
+as of now we use build periodically
+0-0 5 * * *
+M H Dy of month M Day of week
+
+schdule it to run every 1 min
+what if the build fails?
+give invalid time comand and in post build actions - email notification
+you have to modify the mail server configuartion in jenkins
+
+goto manage jenkins , in the email notification,smtp server , smtp.gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+ 	

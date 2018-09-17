@@ -1,0 +1,23 @@
+gradelew clean
+gradlew eclipse
+gradlew build
+once it reach 70% it will start executing the script
+chromedriver 2.20
+c:/users/vdevaraj
+.gradle/   - all gradle jars should have been downloaded
+
+check java version 
+echo %java_home%
+jdk 1.8.0_162
+
+
+Import the project
+File -> Import->GRADLE- existing gradle project
+click finish
+
+once project is imported - gradle execution and  gradle task
+rt panel ->GWCC-Scripts_Master
+build
+
+Test.gradle - for debug
+selecting the test to run in properties.json

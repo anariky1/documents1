@@ -1,0 +1,82 @@
+//int x=loginBtn.getLocation().getX();
+		//int y=loginBtn.getLocation().getY();
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//int x = loginBtn.getSize().getWidth();
+		//int y = loginBtn.getSize().getHeight();
+		
+		//Thread.sleep(5000);
+		//driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		//driver.findElement(By.cssSelector("input[value='Login']")).click();
+		
+			
+		 //WebDriverWait wait = new WebDriverWait(driver,60);
+		// wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Login']"))).click();
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='input-group-btn']/input[@value='Login']"))).click();
+		//wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(loginBtn)).click();
+		//loginBtn.click();
+	   /* Actions actions = new Actions(driver);
+		//actions.moveToElement(loginBtn).click().build().perform();
+		actions.moveToElement(loginBtn).click().build().perform();*/
+		//((JavascriptExecutor) driver).executeScript("arguments[0].click();", loginBtn);
+
+
+
+
+
+=====================================================
+
+  driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		      /* try {
+					Thread.sleep(3000);
+				    } catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				    }*/
+			   // return  driver.findElement(By.cssSelector("td[text *='Contacts']")).isDisplayed();
+			   //  WebDriverWait wait = new WebDriverWait(driver,3000);
+		    	  //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Contacts')]")));
+		    	 //wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[contains(text(),'Contacts')]")));
+			     // driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			      //Actions actions = new Actions(driver);
+				  //actions.moveToElement(loginBtn).click().build().perform();
+				// actions.moveToElement(contactsLabel).build().perform();
+				 // wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[contains(text(),'Contacts')]")));
+               // ((JavascriptExecutor) driver).executeScript("arguments[0];", contactsLabel);
+//			     System.out.println(s);
+			  			 
+           // wait.until(ExpectedConditions.jsReturnsValue("returndocument.readyState==\"loaded\";"));
+           // FluentWait<WebDriver> fwait=new FluentWait<WebDriver>(driver)
+          // .withTimeout(60, TimeUnit.SECONDS)
+           //.pollingEvery(5, TimeUnit.SECONDS);
+          //  fwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Contacts')]")));     
+		    //  return contactsLabel.isDisplayed(); 
+		     //return  driver.findElement(By.cssSelector("td[text() *='Contacts']")).isDisplayed();
+			 
+			// boolean b = TestUtil.isLoadComplete(driver);
+			// System.out.println(b);
+			
+			// return  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Contacts')]"))).isDisplayed();
+			
+			 // boolean b= contactsLabel.isDisplayed();
+			  //System.out.println(b);
+			 
+			 /* while(!b){
+				 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Contacts')]")));
+				 b= contactsLabel.isDisplayed();
+			  }*/
+			   
+			   try{
+				   contactsLabel.isDisplayed();				   
+			   }catch(Exception e){
+				   while(!contactsLabel.isDisplayed()){
+						TestUtil.explicitWait(contactsLabel, 60);
+						 contactsLabel.isDisplayed();
+					  }
+			   }
+			  
+			
+			 
+			 return contactsLabel.isDisplayed();
+		     
